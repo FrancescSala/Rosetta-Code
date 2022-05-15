@@ -1,5 +1,5 @@
 function getDateFormats() {
-    const MONTHS = ['January','Febraury','March','April','May','June','July','August','September','October','November','December'];
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     let cd = new Date();     // today, the current date
     let year = cd.getFullYear(); // year number
