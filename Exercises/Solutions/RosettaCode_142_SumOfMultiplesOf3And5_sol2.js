@@ -1,12 +1,10 @@
+// similar to solution 1, but not trying all i, but going directly to  muiltiples of 3 and nultiples of 5
 function sumMults(n) {
-    
-    function _sumMult(n,base) {
-        let sum = 0;
-        let upper = Math.floor(n/base);
-        if (Number.isInteger(n/base)) upper--;
-        return base * (upper * (upper+1) / 2);
-    }
-    return _sumMult(n,3) + _sumMult(n,5) - _sumMult(n,15);
+    let sum = 0;
+    for (let i = 3;i < n; i+=3) sum += i;   // add up the multiples of 3
+    for (let i = 5;i < n; i+=5) sum += i;   // add up the multiples of 5
+    for (let i = 15;i < n; i+=15) sum -= i; // substracts the multiples of 15, because have been added twice
+    return sum;
 }
 
 console.log(sumMults(10));      // should return 23.

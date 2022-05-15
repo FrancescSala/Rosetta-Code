@@ -1,10 +1,8 @@
 function sumMults(n) {
     let sum = 0;
-    for (let i = 3;i < n; i+=3) sum += i;   // add up the multiples of 3
-    for (let i = 5;i < n; i+=5) sum += i;   // add up the multiples of 5
-    for (let i = 15;i < n; i+=15) sum -= i; // substracts the multiples of 15, because have been added twice
+    for (let i = 1;i < n; i++) 
+        if(i % 3 === 0 || i % 5 === 0) sum += i;   // add up the multiples of 3 or 5
     return sum;
-    // this could be done also applying formulas (finite series), instead of generating all summands and making the additions
 }
 
 console.log(sumMults(10));      // should return 23.
