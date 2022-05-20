@@ -15,10 +15,8 @@ function getDPA(num) {
     }
 
     let DPA = [0 , 0, 0];
-    for (let i = 1; i <= num; i++) {
-        let c = classify(i);
-        DPA[c]++
-    }
+    for (let i = 1; i <= num; i++)
+        DPA[classify(i)]++;
     return DPA;
 }
 

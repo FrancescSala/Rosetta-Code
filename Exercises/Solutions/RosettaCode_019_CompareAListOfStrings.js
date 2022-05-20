@@ -1,5 +1,5 @@
 function allEqual(arr) {
-    return arr.findIndex((elem, index) => index >= 1 && elem !== arr[0]) === -1;
+    return arr.findIndex(elem => elem !== arr[0]) === -1;
 }
   
 function azSorted(arr) {
