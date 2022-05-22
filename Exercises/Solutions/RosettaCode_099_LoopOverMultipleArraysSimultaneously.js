@@ -1,7 +1,7 @@
 function loopSimult(A) {
     if (!Array.isArray(A)) throw Error('A should be an array');
-    if (A.findIndex(elem => !Array.isArray(elem)) !== -1) throw Error('All elements in A should be arrays');
-    if (A.findIndex(elem => elem.length !== A[0].length) !== -1) throw Error('All elements in A should be arrays of the same length');
+    if (A.some(elem => !Array.isArray(elem))) throw Error('All elements in A should be arrays');
+    if (A.some(elem => elem.length !== A[0].length)) throw Error('All elements in A should be arrays of the same length');
 
     let result = Array(A[0].length).fill('');
     for (let i = 0; i < result.length; i++) 
