@@ -13,6 +13,7 @@ function getFinalOpenedDoors(numDoors) {
         for(let k = 1;k <= Math.floor(i/2);k++)   // no need to iterate until i
             if (i % k === 0) howMany++;
         return howMany + 1;                       // +1 is to count also i as divisor of itself. not reached during iteration
+
     };
 
     let opened = [];

@@ -8,10 +8,11 @@ function getFinalOpenedDoors(numDoors) {
     // attention index in array starts with 0, in problem starts with 1 (need to add 1)
 
     for (let i = 1; i <= numDoors; i++)  // i = i-thessim pass through all doors
-        doors.map((elem,index,arr) => { if ((index + 1) % i === 0) arr[index] = !arr[index]; });
+        doors.forEach((elem,index,arr) => { if ((index + 1) % i === 0) arr[index] = !arr[index]; });
+
     // take index of opened doors    
     let opened = [];
-    doors.map((elem,index) => { if (elem) opened.push(index+1); });
+    doors.forEach((elem,index) => { if (elem) opened.push(index+1); });
     return opened;
 }
 
