@@ -1,6 +1,6 @@
 /*  It's the same as solution 1, but 
     1. we do not put the properdivisors in an array, instead calculate the sum directly
-    2. when calculating the sum(propDivs(N)), we stop if is already bigger then n
+    2. when calculating the sum(propDivs(N)), we stop if is already bigger than n
     This way a (small) amount of time is saved.
 */
 function amicablePairsUpTo(maxNum) {
