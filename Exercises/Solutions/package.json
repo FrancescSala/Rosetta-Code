@@ -1,0 +1,12 @@
+{
+	"name": "RosettaCode",
+	"author": "Francesc",
+	"description": "Solutions to the collection of Javascript exercises with the name Rosett Code published by FeeCodeCamp",
+	"keywords": [ 
+		"Javascript", 
+		"FreeCodeCamp"
+	  ],
+	  "license": "MIT",
+      "type": "module",
+	  "version": "1.0.0"
+}

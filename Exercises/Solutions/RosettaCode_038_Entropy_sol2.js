@@ -1,3 +1,7 @@
+// It's exactly the same as solution 1, but added an export statement at the end of the file.
+// The export is to use function entropy in the solution of exercise Fibonacci Word (RosettaCode_052_FibbonacciWord_sol2.js)
+// With an export, this script CANNOT be uploaded for check in freeCodeCamp. Use solution 1 instead.  
+
 function entropy(s) {
     if (!(s instanceof String || typeof s === 'string')) throw Error('Argument s should be a String');
     if (s.length === 0) throw Error('Argument s ); // should be a non-zero length String');
@@ -20,10 +24,11 @@ function entropy(s) {
 }
 
 
-
 console.log(entropy("0") ); // should return 0
 console.log(entropy("01") ); // should return 1
 console.log(entropy("0123") ); // should return 2
 console.log(entropy("01234567") ); // should return 3
 console.log(entropy("0123456789abcdef") ); // should return 4
 console.log(entropy("1223334444") ); // should return 1.8464393446710154
+
+export {entropy};
