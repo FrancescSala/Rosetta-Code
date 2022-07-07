@@ -1,29 +1,8 @@
-
-/*
-I was first trying this, which worked for the freeCodeCamp test cases except second one.
-Sort the items per relative value  (value per weight unit) descending.
-And start filling the knapsack with the relatively more valuable items
+// I had a look to a pseudocode in English wikipedia. (https://en.wikipedia.org/wiki/Knapsack_problem)
 function knapsack(items, maxweight) {
-    let sorted = Array.from(items).sort((a,b) => {return b.value/b.weight - a.value/a.weight});
-    let value = 0;
-    let remainder = maxweight;
-    sorted.forEach((elem,index) => {
-        if (elem.weight <= remainder) {
-            console.log(elem.name);
-            value += elem.value;
-            remainder-= elem.weight;
-        } 
-    });
-    return value;
-}
-*/
-
-// As it did not work for all cases, I had a look to a pseudocode in English wikipedia. (https://en.wikipedia.org/wiki/Knapsack_problem)
-// I am guilty.
-function knapsack(items, maxweight) {
-    let m = Array(items+1);
+    let m = Array(items.length+1);
     for (let i = 0; i <= items.length; i++) m[i] = new Array(maxweight+1);
-    // m[i,w] is the maximum value if taking the first i items and not exeeding weight w
+    // m[i,w] is the maximum value if taking the first i items and not exceeding weight w
     // m [0,w] = 0
     // m [i,w] = m[i-1,w] if wi > w (the new item is more than the current weight limit)
     // m[i,w] = max(m[i-1,w], m[i-1,w-wi] + v[i]) if wi <= w

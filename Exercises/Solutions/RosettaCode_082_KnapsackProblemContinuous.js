@@ -1,9 +1,9 @@
-function knapContinuous(items, maxweight) {
-    let sorted = Array.from(items).sort((a,b) => {return b.value/b.weight - a.value/a.weight}); // sort the items by relative value, descending
+function knapContinuous(data, maxweight) {
+    let sorted = Array.from(data).sort((a,b) => {return b.value/b.weight - a.value/a.weight}); // sort the data by relative value, descending
     let value = 0;
     let remainder = maxweight;
-    sorted.forEach((elem,index) => {
-        if (elem.weight <= remainder) {  // while there is room in the knapsack, fill the meaximum amount
+    sorted.forEach((elem) => {
+        if (elem.weight <= remainder) {  // while there is room in the knapsack, fill the maximum amount
             value += elem.value;
             remainder-= elem.weight;
         } else {                         // if there is no room for the maximum amount, take the remainder
