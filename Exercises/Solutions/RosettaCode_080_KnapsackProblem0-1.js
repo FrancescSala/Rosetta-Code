@@ -6,12 +6,12 @@ And start filling the knapsack with the relatively more valuable items
 function knapsack(items, maxweight) {
     let sorted = Array.from(items).sort((a,b) => {return b.value/b.weight - a.value/a.weight});
     let value = 0;
-    let reminder = maxweight;
+    let remainder = maxweight;
     sorted.forEach((elem,index) => {
-        if (elem.weight <= reminder) {
+        if (elem.weight <= remainder) {
             console.log(elem.name);
             value += elem.value;
-            reminder-= elem.weight;
+            remainder-= elem.weight;
         } 
     });
     return value;
