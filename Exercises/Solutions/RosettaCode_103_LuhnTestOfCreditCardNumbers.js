@@ -19,10 +19,11 @@ function luhnTest(str) {
     return ((s1 + s2) % 10 === 0);
 }
 
-
+/*
 console.log(luhnTest("4111111111111111")); // should return true.
 console.log(luhnTest("4111111111111112")); // should return false.
 console.log(luhnTest("49927398716")); // should return true.
 console.log(luhnTest("49927398717")); // should return false.
 console.log(luhnTest("1234567812345678")); // should return false.
 console.log(luhnTest("1234567812345670")); // should return true.
+*/
