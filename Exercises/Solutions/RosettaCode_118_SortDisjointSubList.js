@@ -1,4 +1,7 @@
 function sortDisjoint(values, indices) {
+    if (!Array.isArray(values)) throw Error('values should be an array');
+    if (!Array.isArray(indices) || indices.some(elem => !Number.isInteger(elem) || elem < 0 || elem > values.length))
+        throw Error('indices should be an array of integers in the right range'); 
 
     let ind = Array.from(indices).sort((a,b) => a-b);
     let v = values.filter((elem,index) => ind.includes(index)).sort((a,b)=> a-b);
