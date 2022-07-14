@@ -13,8 +13,10 @@ function sternBrocot(num) {
     return sequence.length-1;
 }
 
+/*
 console.log(sternBrocot(2)); // should return 3.
 console.log(sternBrocot(3)); // should return 5.
 console.log(sternBrocot(5)); // should return 11.
 console.log(sternBrocot(7)); // should return 19.
 console.log(sternBrocot(10)); // should return 39.
+*/
