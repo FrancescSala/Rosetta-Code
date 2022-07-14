@@ -1,3 +1,5 @@
+// Quite a dirty solution. For sure can be done better, eaiser, and more elegant and efficient.
+// But it works.
 function spiralArray(n) {
     if (isNaN(n) || !Number.isInteger(n) || n <=0 ) throw Error('n should be a positive integer');
     let spiral = [];
