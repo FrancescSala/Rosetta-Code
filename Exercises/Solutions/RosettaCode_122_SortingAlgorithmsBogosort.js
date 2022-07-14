@@ -22,6 +22,7 @@ function bogosort(v) {
     return aux;
 }
 
+
 /*
 console.log(bogosort([25, 32, 12, 7, 20])); // should return [7, 12, 20, 25, 32].
 console.log(bogosort([38, 45, 35, 8, 13])); // should return [8, 13, 35, 38, 45].
