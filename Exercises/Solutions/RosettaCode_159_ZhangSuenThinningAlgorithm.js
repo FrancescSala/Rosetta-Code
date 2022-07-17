@@ -63,7 +63,7 @@ function thinImage(image) {
                 for (let j = 1; j < thinned[0].length; j++) {
                     if (thinned[i][j] === black) {
                         let [A,B] =_calculateAB(thinned,i,j);
-                        if (A === 1 && B >= 2 & B <= 6 && _p2p4p6(thinned,i,j) && _p4p6p8(thinned,i,j)) {
+                        if (A === 1 && B >= 2 && B <= 6 && _p2p4p6(thinned,i,j) && _p4p6p8(thinned,i,j)) {
                             finished = false;
                             annotations[i][j] = true;
                         }
@@ -76,7 +76,7 @@ function thinImage(image) {
 }
 
 
-
+/*
 const testImage1 = [
     '                               ',
     '#########       ########       ',
@@ -111,3 +111,4 @@ for (let i=0; i < myResult.length; i++)
         if (myResult[i][j] !== expectedResult[i][j]) {
             console.log(`i ${i} j ${j} expected ${expectedResult[i][j]} got ${myResult[i][j]}`);
         }
+*/
