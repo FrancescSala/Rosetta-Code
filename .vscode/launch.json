@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Program",
+            "runtimeExecutable": "/Users/francescsala/.nvm/versions/node/v16.15.0/bin/node",
+            "program": "${workspaceFolder}/Exercises/Solutions/A_WIP_RosettaCode_159_ZhangSuenThinningAlgorithm.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch Program",
